@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Aqui Research.">
+	<main>
+		<h1>aquif-2: <span class="text-gradient">runs</span> smooth AF in any language.</h1>
+		<p>
+			Exiting Discord, aquif-2 is taking a new approach - expanding itself into any programming language, starting with Go.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="aquif1"
+				title="aquif-1"
+				body="The first Discord AI model."
+			/>
+			<Card
+				href="/"
+				title="home"
+				body="Go back to the home page."
+			/>
+			<Card
+				href="slingsh"
+				title="slingsh-1"
+				body="[COMING SOON] An image generation model capable of more..."
+			/>
+			<Card
+				href="about"
+				title="about"
+				body="Not an AI model - but a place to talk about the project."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.2));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
